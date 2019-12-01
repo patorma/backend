@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 // Se ejecuta Schema como si fuera una funcion
 const gastoSchema = new Schema({
@@ -22,14 +22,13 @@ const gastoSchema = new Schema({
     },
     valor: Number,
     fechaPagado: {
-        type: Date,
-        min: '2000-01-01',
-        max: '2040-12-31'
+        type: String,
+        trim: true
     },
     date: { type: Date, default: Date.now }
 
-})
+});
 
-const Gasto = mongoose.model('gasto', gastoSchema)
+const Gasto = mongoose.model('gasto', gastoSchema);
 
-module.exports = Gasto
+module.exports = Gasto;

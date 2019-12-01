@@ -9,6 +9,6 @@ const config = {
         host: process.env.DB_HOST,
         dbName: process.env.DB_NAME
     }
-}
+};
 
-module.exports = config
+module.exports = config;
